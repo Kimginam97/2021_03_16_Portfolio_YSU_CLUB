@@ -11,10 +11,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.persistence.EntityManager;
-import java.awt.*;
-import java.util.List;
-
 
 @Service
 @Transactional(readOnly = true)
@@ -23,6 +19,7 @@ public class JoinService {
     private final ClubRepository clubRepository;
     private final MemberRepository memberRepository;
     private final JoinRepository joinRepository;
+
     //가입
     @Transactional
     public Long Join(Long memberId,Long clubId,int count){
@@ -54,8 +51,5 @@ public class JoinService {
         //동아리 탈퇴
         join.cancel();
     }
-
-
-
 
 }

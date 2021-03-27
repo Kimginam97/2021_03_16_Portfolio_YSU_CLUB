@@ -1,15 +1,9 @@
 package kr.ac.yeonsung.demo.repository;
 
 import kr.ac.yeonsung.demo.domain.Join;
-import kr.ac.yeonsung.demo.domain.JoinClub;
-import kr.ac.yeonsung.demo.domain.Member;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
-
 import javax.persistence.EntityManager;
-import java.awt.*;
-import java.util.List;
-
 
 @Repository
 @RequiredArgsConstructor
@@ -27,6 +21,5 @@ public class JoinRepository {
     public Join findOne(Long id){
         return em.find(Join.class,id);
     }
-
 
 }
