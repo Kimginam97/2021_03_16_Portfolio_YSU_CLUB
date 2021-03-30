@@ -24,6 +24,6 @@ public class JoinRepository {
     public Join findOne(Long id){
         return em.find(Join.class,id);
     }
-
+    // 모든 동아리 신청 현황 찾기(쿼리)
     public List<JoinClub> findAll(){return em.createQuery("select j from JoinClub j",JoinClub.class).getResultList();}
 }

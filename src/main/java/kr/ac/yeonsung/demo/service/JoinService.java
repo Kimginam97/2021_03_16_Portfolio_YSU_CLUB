@@ -53,6 +53,7 @@ public class JoinService {
         //동아리 탈퇴
         join.cancel();
     }
+    // 모든 동아리 신청 현황 찾기
     public List<JoinClub> findJoinClub() {
         return joinRepository.findAll();
     }
