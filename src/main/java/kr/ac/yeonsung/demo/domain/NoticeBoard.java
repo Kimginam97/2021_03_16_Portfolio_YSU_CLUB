@@ -2,12 +2,13 @@ package kr.ac.yeonsung.demo.domain;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.DynamicInsert;
 import javax.persistence.*;
-
+import java.time.LocalDateTime;
 import static javax.persistence.FetchType.*;
 
 @Entity
-@Getter @Setter
+@Getter @Setter @DynamicInsert
 public class NoticeBoard {
 
     @Id @GeneratedValue
@@ -20,6 +21,9 @@ public class NoticeBoard {
     private String title;//제목
 
     private String content;//게시글 내용
+
+    private String writeDate;//작성한 날짜
+    private String updateDate;//수정한 날짜
 
     @ManyToOne(fetch = LAZY)//n:1
     @JoinColumn(name = "member_id")
