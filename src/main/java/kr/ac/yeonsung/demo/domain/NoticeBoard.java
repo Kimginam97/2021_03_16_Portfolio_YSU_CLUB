@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.DynamicInsert;
 import javax.persistence.*;
-import java.time.LocalDateTime;
 import static javax.persistence.FetchType.*;
 
 @Entity
