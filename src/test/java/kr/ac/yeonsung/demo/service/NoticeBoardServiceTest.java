@@ -38,9 +38,11 @@ public class NoticeBoardServiceTest {
     @Test
     public void 게시글삭제_성공() throws Exception{
         NoticeBoardForm noticeBoard = new NoticeBoardForm();
+
         noticeBoard.setTitle("제목2");
         noticeBoard.setContent("내용2");
         noticeBoardService.write(noticeBoard);
+
 
         em.flush();
 

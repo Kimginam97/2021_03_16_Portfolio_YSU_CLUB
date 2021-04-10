@@ -74,7 +74,6 @@ public class NoticeBoardController {
     public String getNoticeBoardList(@PageableDefault Pageable pageable, Model model){
         Page<NoticeBoard> noticeBoardList = noticeBoardService.findAll(pageable);
         model.addAttribute("noticeList", noticeBoardList);
-
         return "noticeBoard/noticeList";
     }
 }

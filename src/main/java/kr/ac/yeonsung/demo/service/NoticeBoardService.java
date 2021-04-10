@@ -37,6 +37,7 @@ public class NoticeBoardService {
     //게시글 단건 조회
     public NoticeBoard findOne(Long boardId){
         return noticeBoardRepository.findById(boardId).orElse(null);
+
     }
    
     //게시글 삭제
@@ -64,4 +65,5 @@ public class NoticeBoardService {
         pageable = PageRequest.of(page, 10, Sort.Direction.DESC,"id");
         return noticeBoardRepository.findAll(pageable);
     }
+
 }
