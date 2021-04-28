@@ -38,7 +38,7 @@ public class JoinClubService {
         log.info("갑이야갑ㄱ박박바갑갑가박ㅂ가"+clubId);
         List<JoinclubMapping> byClub = joinClubRepository.findByClub(club);
         int size = byClub.size();
-        for(int i=0; i<=byClub.size();i++) {
+        for(int i=0; i<=size;i++) {
             log.info("나와라요~~~" + byClub.get(i).getJoin_Id());
             Join join = joinRepository.findOne(byClub.get(i).getJoin_Id());
                 join.cancel();
