@@ -34,17 +34,11 @@ public class JoinClubService {
 
     @Transactional
     public void chageStatus(Club club){
-        Long clubId = club.getId();
-        log.info("갑이야갑ㄱ박박바갑갑가박ㅂ가"+clubId);
         List<JoinclubMapping> byClub = joinClubRepository.findByClub(club);
         int size = byClub.size();
-        for(int i=0; i<=size;i++) {
-            log.info("나와라요~~~" + byClub.get(i).getJoin_Id());
+        for(int i=0; i<size;i++) {
             Join join = joinRepository.findOne(byClub.get(i).getJoin_Id());
                 join.cancel();
         }
-//        log.info("나와라아아아아아아아 조인아이디 !!! "+id);
-//        Join join = joinRepository.findOne(id);
-//        join.cancel();
     }
 }
