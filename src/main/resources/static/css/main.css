@@ -2,7 +2,15 @@ html, body {
     margin: 0;
     height: 100%;
 }
-
+.container-fluid{
+    height: 80%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.container-fluid::-webkit-scrollbar {
+    display: none;
+}
 /*id가 board인 태그의 thread 안에 속해있는 tr 안에 th태그*/
 #board thead tr th{
     text-align: center;/*글자 중앙정렬*/
