@@ -4,12 +4,12 @@
 <body>
 <div th:replace="fragments/navbar :: navbar" />
 
-<div class="container-fluid " id="body">
+<div class="container-fluid ">
     <div class="row">
         <div th:replace="fragments/sidebar :: sidebar"/>
             <div class="container col-md-10" th:if="${getBoardList.size()}!=0">
                 <div>
-                    <table class="table table-striped" id="board">
+                    <table class="table table-striped">
                         <thead>
                         <tr>
                             <th >#</th>
