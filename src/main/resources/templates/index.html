@@ -72,9 +72,11 @@
                   </div>
                 </div>
               </div>
+
               <!--main 공지사항-->
                 <a href="/" class="list-group-item active" style="float: left">공지사항</a>
                 <div class="list-group-item">
+
                 <div class="list-group" th:if="${findTop3.size()}!=0">
                   <table class="table">
                     <thead>
@@ -84,17 +86,21 @@
                       <th class="mobile" scope="col">작성자</th>
                       <th class="mobile" scope="col">작성일</th>
                     </tr>
+
                     </thead>
                     <tbody>
+
                     <tr th:each="findTop : ${findTop3}">
                       <td th:text="${findTop.id}"></td>
                       <td><a th:text="${findTop.title}" href="" th:href="@{'/noticeBoard/view/'+${findTop.id}}"/></td>
                       <td th:text="${findTop.name}"></td>
                       <td th:text="${findTop.writeDate}"></td>
+
                     </tr>
                     </tbody>
                     <tr>
                       <td colspan="4" style="text-align: right"><button class="btn btn-success" data-toggle="modal" data-target="#modal" onclick = "location.href = '/noticeBoard/write'">공지사항 추가</button></td>
+
                     </tr>
                   </table>
                 </div>
@@ -102,15 +108,19 @@
                   <table class="table">
                    <thead>
                     <tr>
+
                       <th class="mobile" scope="col">번호</th>
                       <th scope="col">제목</th>
                       <th class="mobile" scope="col">작성자</th>
                       <th class="mobile" scope="col">작성일</th>
+
                     </tr>
                    </thead>
                     <tbody>
                     <tr>
+
                       <td colspan="4" style="text-align: center">등록된 공지사항이 없습니다!</td>
+
                     </tr>
                     </tbody>
                     <tr>

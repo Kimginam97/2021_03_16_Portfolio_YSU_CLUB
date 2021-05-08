@@ -4,6 +4,7 @@
 <body>
 <div th:replace="fragments/navbar :: navbar" />
 
+
 <div class="container-fluid ">
     <div class="row">
         <div th:replace="fragments/sidebar :: sidebar"/>
@@ -49,6 +50,7 @@
                                 <a class="page-link" th:text="${page}" th:href="@{/noticeBoard/list?(page=${page})}"></a>
                             </li>
 
+
                             <li style="float: left" th:class="${noticeList.last} ? 'page-item'">
                                 <a class="page-link" th:href="${noticeList.last} ? '#' : @{/noticeBoard/list(page=${noticeList.number + 2})}" aria-label="Next">
                                     <span aria-hidden="true">&gt;</span>
@@ -86,6 +88,7 @@
 
         </div>
     </div>
+
 <div th:replace="fragments/footer :: footer" />
 </body>
 </html>
